@@ -1,0 +1,5 @@
+calculated_columns:
+  calc_baseRentperSquaremeter: "df['obj_baseRent'] / df['obj_livingSpace']"
+  calc_totalRentperSquaremeter: "df['obj_totalRent'] / df['obj_livingSpace']"
+  calc_purchasePriceperSquaremeter: "df['obj_purchasePrice'] / df['obj_livingSpace']"
+  calc_livingSpaceperRoom: "df['obj_livingSpace'] / df['obj_noRooms']"

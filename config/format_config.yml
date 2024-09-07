@@ -1,0 +1,16 @@
+cast_to_numeric:
+  float:
+    - 'obj_baseRent'
+    - 'obj_livingSpace'
+    - 'obj_noRooms'
+    - 'obj_totalRent'
+    - 'obj_floor'
+    - 'obj_numberOfFloors'
+    - 'obj_heatingCosts'
+    - 'obj_purchasePrice'
+    - 'obj_pricetrend'
+    - 'obj_pricetrendbuy'
+    - 'obj_pricetrendrent'
+    - 'obj_serviceCharge'
+    - 'obj_thermalChar'
+    - 'obj_heatingCosts'

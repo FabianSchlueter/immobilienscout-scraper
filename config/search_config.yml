@@ -1,0 +1,9 @@
+Cities:
+  Buxtehude:
+    - https://www.immobilienscout24.de/Suche/de/niedersachsen/stade-kreis/buxtehude/wohnung-mieten?enteredFrom=result_list&sorting=2&pagenumber=
+    - https://www.immobilienscout24.de/Suche/de/niedersachsen/stade-kreis/buxtehude/wohnung-kaufen?enteredFrom=one_step_search&sorting=2&pagenumber=
+  Muenchen:
+    - https://www.immobilienscout24.de/Suche/de/bayern/muenchen/eigentumswohnung-mit-garten?numberofrooms=8.0-&enteredFrom=result_list&sorting=2&pagenumber=
+
+Storage_Directory:
+  - C:\Immobilienscout\\
