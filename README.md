@@ -33,13 +33,15 @@ Finding the right real estate offer can be challenging, especially in smaller ci
 
 2. **Install Dependencies**
 
+   This project uses [uv](https://docs.astral.sh/uv/) for dependency management. If you don't have `uv` installed yet, see the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
+
    ```bash
-    pip install -r requirements.txt
+    uv sync
 
 3. **Set Up Pre-commit Hooks (optional but recommended):**
 
    ```bash
-    pre-commit install
+    uv run pre-commit install
 
 ## Usage
 
@@ -48,7 +50,7 @@ Finding the right real estate offer can be challenging, especially in smaller ci
 2. **Run the Scraper:** The scraper will start fetching real estate offers based on the configuration provided.
 
    ```bash
-    python main.py
+    uv run python main.py
 
 3. **View Collected Data:** The collected data will be stored in an Excel file in the configured location. You can analyze this data using Excel or other tools.
 
@@ -89,4 +91,4 @@ This project uses pre-commit hooks to ensure code quality and consistency.
 To set up pre-commit hooks locally, run the following command after having [installed dependencies](#installation):
 
 ```bash
-pre-commit install
+uv run pre-commit install

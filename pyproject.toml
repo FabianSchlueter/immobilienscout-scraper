@@ -1,0 +1,17 @@
+[project]
+name = "immobilienscout-scraper"
+version = "0.1.0"
+description = "Web scraper for collecting historical real estate offer data from immobilienscout24.de"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl==3.1.5",
+    "pandas==2.2.2",
+    "pyyaml>=6.0",
+    "selenium==4.23.1",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit==3.8.0",
+]
