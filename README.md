@@ -56,10 +56,18 @@ Finding the right real estate offer can be challenging, especially in smaller ci
 
 ## Configuration
 
-The scraper's behavior is controlled via a configuration file [search_config.yml](config/search_config.yml). This file allows you to specify:
+The scraper's behavior is controlled via a configuration file, [search_config.yml](config/search_config.yml) by default. This file allows you to specify:
 
 - **Search Criteria:** Filters for location, property type, price range, etc. You can go to https://www.immobilienscout24.de/ and filter for your criteria manually. Then, copy the URL of the first search result page and add it to the list of URLs of a city. Make sure that the URLs end with "&pagenumber=". Each city can have multiple URLs to scrape. The data is aggregated in one file per city.
 - **Data Storage:** Specify the directory where the data should be stored.
+
+Since `search_config.yml` typically holds your personal search criteria and local storage path, you likely don't want to version your own copy. Instead, keep it outside the repository and point the scraper at it via the `--config` flag:
+
+```bash
+uv run python main.py --config C:\Immobilienscout\search_config.yml
+```
+
+If `--config` is omitted, it defaults to the tracked [search_config.yml](config/search_config.yml) in this repo.
 
 Also, if you want to cast columns of the output data to numeric or string, you can set those in [format_config.yml](config/format_config.yml). For calculating columns like rent per squaremeter you can set those in [calculations.yml](config/calculations_config.yml)
 

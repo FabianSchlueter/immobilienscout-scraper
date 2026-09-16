@@ -14,7 +14,9 @@ Date: 2024-09-07
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
+import argparse
 import json
+import os
 from datetime import datetime
 import time
 import pandas as pd
@@ -23,11 +25,19 @@ import utils
 
 def main():
 
+    # Parse command line arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '--config', default=os.path.join('config', 'search_config.yml'),
+        help='Path to the search config YAML (Cities + Storage_Directory). '
+             'Defaults to config/search_config.yml.')
+    args = parser.parse_args()
+
     # Load configs
     search_parameters = utils.load_yaml_config(
-        file_path=r'config\search_config.yml')['Cities']
+        file_path=args.config)['Cities']
     storage_directory = utils.load_yaml_config(
-        file_path=r'config\search_config.yml')['Storage_Directory'][0]
+        file_path=args.config)['Storage_Directory'][0]
     output_format_config = utils.load_yaml_config(
         file_path=r'config\format_config.yml')
     calculation_config = utils.load_yaml_config(
